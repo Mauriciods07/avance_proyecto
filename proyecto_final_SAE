@@ -1,0 +1,53 @@
+Proceso SAE
+	Escribir "Bienvenido al SAE, el Sistema de Analisis Estilometrico"
+	Escribir "Que podemos hacer?"
+	Escribir "0. Que es el SAE?"
+	Escribir "1. Analizar longitud de oraciones"
+	Escribir "2. Analizar la distribucion de categorias gramaticales"
+	Escribir "3. Analizar la riqueza lexica"
+	Escribir "4. Analizar el cambio de estilo con respecto al tiempo"
+	Escribir "5. Salir"
+	Leer b
+	
+	Segun b Hacer
+		0:
+			Escribir " "
+			Escribir "El SAE es un sistema que consiste en el analisis del lenguaje con Python"
+			Escribir "Con las herramientas y librerias que ofrece, es posible analizar los textos que se deseen analizar"
+			Escribir "Ya sea con nltk o con Freeling, los archivos se etiquetaran por palabras o frases y se haran comparaciones que permitan concluir si la distancia estilistica entre textos es estrecha o amplia"
+			Escribir "En terminos generales, estrecho implica que ambos textos fueron escritos por el mismo autor"
+			Escribir "Amplio significa que la autoria pertenece a dos autores distintos"
+		1:
+			Escribir " "
+			Escribir "Analizar longitud de oraciones"
+			Escribir "En esta opcion analiza los elementos que componen cada oracion presente en ambos textos"
+			Escribir "El numero de palabras usadas son un buen indicador de estilo"
+			Escribir "El promedio de elementos del primer texto se dividira entre el promedio de elementos del segundo"
+			Escribir "Mientras mas cercano sea este valor a 1, habra una mayor posibilidad de que ambos textos pertenezcan al mismo autor"
+		2:
+			Escribir " "
+			Escribir "En esta opcion, se etiqueta cada una de las palabras de ambos textos con la herramienta Freeling"
+			Escribir "Las categorias gramaticales a analizar, por orden de relevancia, son las siguientes:"
+			Escribir "1. Verbos"
+			Escribir "2. Sustantivos"
+			Escribir "3. Adverbios"
+			Escribir "4. Pronombres"
+			Escribir "El usuario podra elegir alguna categoria gramatical a elegir y ver si la comparacion arroja resultados eficientes en su busqueda"
+		3:
+			Escribir " "
+			Escribir "En esta opcion, se analiza el numero de palabras diferentes que se encuentran en ambos textos"
+			Escribir "Se cuentan las palabras totales, por cada texto y se dividen entre el numero de palabras que tienen una sola aparicion"
+			Escribir "Asimismo, se puede realizar por medio de otro tipo de palabras, como las que aparecen dos veces o las que se repiten con mayor frecuencia"
+		4:
+			Escribir " "
+			Escribir "La ultima opcion se refiere a un acercamiento a un solo autor"
+			Escribir "Cuando las opciones anteriores no arrojaron informacion suficiente para discriminar el autor de ambos textos, es posible que hayan sido escritos por el mismo"
+			Escribir "Con esta herramienta, es posible comprobar la hipotesis mencionada"
+		5:
+			Escribir "Gracias por usar nuestro programa"
+			Escribir "Vuelva pronto"
+		De Otro Modo:
+			Escribir "Opcion no valida"
+	FinSegun
+	
+FinProceso
