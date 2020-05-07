@@ -31,6 +31,7 @@ def Etiquetado_POS():
 def Riqueza_lexica():
     dato1 =len(texto1) / len(set(texto1))
     dato2 = len(texto2) / len(set(texto2))
+
     prom = promedio(dato1, dato2)
     if promedio > 1:
         print("Los textos son semejantes")
@@ -67,21 +68,27 @@ def Dice_similarity():
     print("acercamiento "+str((len(COMMON_WORDS))/(len(WORDS1) + len(WORDS2) - len(COMMON_WORDS))))
     return (2*len(COMMON_WORDS))/(len(WORDS1) + len(WORDS2))
 
-    #Esta función busca una categoría gramatical en específico por medio de la etiqueta obtenida con Freeling. Divide el total de veces que se repite dicha categoría y la divide entre el total de palabtas en el texto. Esto lo hace con cada archivo.
+#Esta función busca una categoría gramatical en específico por medio de la etiqueta obtenida con Freeling. Divide el total de veces que se repite dicha categoría y la divide entre el total de palabtas en el texto. Esto lo hace con cada archivo.
 #Finalmente, divide el promedio, nuevamente, entre sí. Si el número es cercano a 1, significa que los textos son similares.
 #Las cinco categorías gramaticales disponibles son adjetivos, sustantivos, verbos, adbverbios y determinantes.
 def Contar_pos(categoria):
+    #Selecciona la etiqueta que se va a analizar
     if categoria == 1:
         letra = 'A'
+        pos = 'adjetivo'
     elif categoria == 2:
         letra = 'N'
+        pos = 'sustantivo'
     elif categoria == 3:
         letra = 'V'
+        pos = 'verbo'
     elif categoria == 4:
         letra = 'R'
+        pos = 'adverbio'
     elif categoria == 5:
         letra = 'D'
-        
+        pos = 'determinante'
+
     categoria = 0
     for oracion in POS_TEXTO1:
         for palabra in oracion:
@@ -102,3 +109,5 @@ def Contar_pos(categoria):
         print("Los textos son similares")
     else:
         print("Los textos no son similares")
+    cadena = 'Categoría gramatical: ' + pos
+    return cadena, aprox
